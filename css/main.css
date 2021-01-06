@@ -290,9 +290,6 @@ ul {
   height: 38px;
   width: 38px;
   background-color: #eeedf0;
-  background-image: linear-gradient(90deg, #c6962b 0%, #b67f11 12%, #fcea92 68%, #b67f11 90%, #c99a2f 100%);
-  background-repeat: no-repeat;
-  background-position-x: 50px;
   color: black;
   transition: all 0.5s;
   top: -38px;
@@ -305,8 +302,8 @@ ul {
 
 .s-containe .swiper-button-prev:hover,
 .s-containe .swiper-button-next:hover {
-  color: black;
-  background-position-x: 0;
+  color: white;
+  background-color: #cca952;
 }
 
 @media (max-width: 992px) {
@@ -400,6 +397,9 @@ ul {
 .product .product-disc h5 {
   font-size: 16px;
   margin-bottom: 10px;
+  line-height: 18px;
+  max-height: 18px;
+  overflow: hidden;
 }
 
 .product .product-disc h5:hover a {
@@ -452,6 +452,10 @@ ul {
 
 .product .cart a span {
   margin-inline-end: 6px;
+}
+
+.product .cart a:hover {
+  background-color: #cca952;
 }
 
 .product:hover .product-img img {
@@ -658,27 +662,13 @@ nav .nav-bottom .c2 {
   justify-content: space-between;
 }
 
-@media (max-width: 576px) {
-  nav .nav-bottom .c2 {
-    justify-content: center;
-    flex-direction: column;
-  }
-}
-
 nav .nav-bottom .nav-logo {
   text-align: start;
-  max-width: 45%;
+  max-width: 47%;
 }
 
 nav .nav-bottom .nav-logo img {
   max-width: 100%;
-}
-
-@media (max-width: 576px) {
-  nav .nav-bottom .nav-logo {
-    margin-bottom: 20px;
-    max-width: 60%;
-  }
 }
 
 nav .nav-bottom .search .search-content {
@@ -738,6 +728,7 @@ nav .nav-bottom .nav-icons .nav-icon .ico-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 nav .nav-bottom .nav-icons .nav-icon .ico-btn .count {
@@ -753,14 +744,9 @@ nav .nav-bottom .nav-icons .nav-icon .ico-btn .count {
   line-height: 0;
   transition: all 0.5s;
   margin-inline-end: 5px;
-}
-
-nav .nav-bottom .nav-icons .nav-icon .ico-btn .down {
-  margin-inline-end: 5px;
-}
-
-nav .nav-bottom .nav-icons .nav-icon .ico-btn .down span {
-  font-size: 8px;
+  position: absolute;
+  top: -3px;
+  right: -7px;
 }
 
 nav .nav-bottom .nav-icons .nav-icon .ico-btn:hover {
@@ -775,6 +761,19 @@ nav .nav-bottom .nav-icons .nav-icon .ico-btn:hover .count {
 
 nav .nav-bottom .nav-icons .nav-icon:last-of-type {
   margin-inline-end: 0;
+}
+
+nav .nav-bottom .nav-icons .nav-lang .ico-btn {
+  font-size: 18px;
+}
+
+nav .nav-bottom .nav-icons .nav-lang img {
+  margin-inline-end: 5px;
+}
+
+nav .nav-bottom .nav-icons .nav-lang .down {
+  margin-inline-start: 5px;
+  font-size: 8px;
 }
 
 nav .nav-bottom .nav-icons .nava-btn,
@@ -797,7 +796,8 @@ nav .nav-bottom .nav-icons .cart-btn {
   }
   nav .nav-bottom .nav-icons .favourite-btn,
   nav .nav-bottom .nav-icons .user .user-body,
-  nav .nav-bottom .nav-icons .nav-lang {
+  nav .nav-bottom .nav-icons .nav-lang,
+  nav .nav-bottom .nav-icons .user {
     display: none;
   }
 }
@@ -978,6 +978,14 @@ nav .nava .nava-content .nava-head {
   nav .nava .nava-content .nava-head .top-settings .top-setting:nth-last-of-type(1) {
     margin-inline-end: 0;
   }
+  nav .nava .nava-content .nava-head .nava-lang .setting-anchor .ico-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav .nava .nava-content .nava-head .nava-lang .setting-anchor .ico-btn img {
+    margin-inline-end: 5px;
+  }
   nav .nava .nava-content .nava-head .nava-lang .setting-anchor .ico-btn .down {
     font-size: 11px;
     margin-inline-start: 6px;
@@ -1002,7 +1010,7 @@ nav .nava .nava-content .nava-head {
     width: 85%;
   }
   nav .nava .nava-content .nava-head {
-    font-size: 14px;
+    font-size: 16px;
   }
   nav .nava .nava-content .nava-head a {
     color: #929292;
@@ -1036,7 +1044,7 @@ nav .nava-active .nava-content {
   height: 50px;
   width: 50px;
   background-color: rgba(97, 97, 97, 0.4);
-  right: 20px;
+  right: 10px;
   bottom: 30px;
   color: white;
   font-size: 17px;
@@ -1187,9 +1195,6 @@ header .swiper-container .swiper-button-next {
   border-radius: 0;
   top: 50%;
   background-color: transparent;
-  background-image: linear-gradient(90deg, #c6962b 0%, #b67f11 12%, #fcea92 68%, #b67f11 90%, #c99a2f 100%);
-  background-repeat: no-repeat;
-  background-position-x: 50px;
   border: 1px solid white;
 }
 
@@ -1208,13 +1213,8 @@ header .swiper-container .swiper-button-next:after {
 
 header .swiper-container .swiper-button-prev:hover,
 header .swiper-container .swiper-button-next:hover {
-  border-color: transparent;
-  background-position-x: 0;
-}
-
-header .swiper-container .swiper-button-prev:hover:after,
-header .swiper-container .swiper-button-next:hover:after {
-  color: black;
+  border-color: #cca952;
+  background-color: #cca952;
 }
 
 header .swiper-container .swiper-button-prev {
@@ -1433,12 +1433,6 @@ footer .footer-top {
   }
 }
 
-@media (max-width: 576px) {
-  footer .footer-top {
-    margin-bottom: 30px;
-  }
-}
-
 footer .footer-top .head h4 {
   margin: 0;
   margin-bottom: 25px;
@@ -1571,18 +1565,10 @@ footer .footer-top .mail .social {
   }
 }
 
-footer .footer-top .mail .social a {
-  height: 40px;
-  width: 40px;
-  border-radius: 100%;
-  background-color: #111742;
-  font-size: 20px;
-  margin: 0 3px;
-  transition: all 0.3s;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 576px) {
+  footer .footer-top .mail .social {
+    margin-top: 30px;
+  }
 }
 
 footer .footer-top .mail .social .wats a {
@@ -1598,11 +1584,29 @@ footer .footer-top .mail .social .snap a {
 }
 
 footer .footer-top .mail .social .insta a {
-  background-image: linear-gradient(45deg, #f48d50, #9137b3);
+  background-color: #ce2983;
 }
 
 footer .footer-top .mail .social .twitter a {
   background-color: #2ac5f4;
+}
+
+footer .footer-top .mail .social a {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background-color: #111742;
+  font-size: 20px;
+  margin: 0 3px;
+  transition: all 0.3s;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer-top .mail .social a:hover {
+  background-color: #cca952;
 }
 
 footer .payment {
@@ -1619,7 +1623,7 @@ footer .payment img {
 
 @media (max-width: 576px) {
   footer .payment {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   footer .payment img {
     max-width: 23%;
@@ -1712,6 +1716,11 @@ html[dir="ltr"] header .swiper-container .swiper-button-next {
 html[dir="ltr"] footer .footer-top .mail form .search-btn {
   right: 0px;
   left: unset;
+}
+
+html[dir="ltr"] .up {
+  right: unset;
+  left: 10px;
 }
 
 @keyframes vibe {
