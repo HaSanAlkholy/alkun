@@ -841,12 +841,12 @@ nav .nava .nava-content > ul {
   padding: 0;
 }
 
-nav .nava .nava-content > ul li {
+nav .nava .nava-content > ul > li {
   margin: 0 15px;
 }
 
-nav .nava .nava-content > ul li a,
-nav .nava .nava-content > ul li .setting-anchor {
+nav .nava .nava-content > ul > li > a,
+nav .nava .nava-content > ul > li > .setting-anchor {
   color: #111742;
   transition: all 0.5s;
   font-size: 18px;
@@ -854,27 +854,26 @@ nav .nava .nava-content > ul li .setting-anchor {
   font-family: TajawalMedium;
 }
 
-nav .nava .nava-content > ul li a:hover,
-nav .nava .nava-content > ul li .setting-anchor:hover {
+nav .nava .nava-content > ul > li > a:hover,
+nav .nava .nava-content > ul > li > .setting-anchor:hover {
   color: #cca952;
 }
 
-nav .nava .nava-content > ul li a .down,
-nav .nava .nava-content > ul li .setting-anchor .down {
+nav .nava .nava-content > ul > li > a .down,
+nav .nava .nava-content > ul > li > .setting-anchor .down {
   display: none;
 }
 
-nav .nava .nava-content > ul li .top-dropDown a {
-  color: #111742;
-}
-
-nav .nava .nava-content > ul li .top-dropDown a:hover {
-  color: #cca952;
-}
-
 nav .nava .nava-content > ul .in-menu a {
+  color: #111742;
+  text-transform: capitalize;
+  transition: all 0.5s;
   font-size: 16px;
   font-family: "TajawalRegular";
+}
+
+nav .nava .nava-content > ul .in-menu a:hover {
+  color: #cca952;
 }
 
 nav .nava .nava-content > ul .sm-link {

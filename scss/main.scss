@@ -640,11 +640,11 @@ nav {
                 font-weight: 500;
                 padding: 0;
 
-                li {
+                &>li {
                     margin: 0 15px;
 
-                    a,
-                    .setting-anchor {
+                    &>a,
+                    &>.setting-anchor {
                         color: $color1;
                         transition: all 0.5s;
                         font-size: 18px;
@@ -660,21 +660,19 @@ nav {
                         }
                     }
 
-                    .top-dropDown {
-                        a {
-                            color: $color1;
-
-                            &:hover {
-                                color: $color2;
-                            }
-                        }
-                    }
                 }
 
                 .in-menu {
                     a {
+                        color: $color1;
+                        text-transform: capitalize;
+                        transition: all 0.5s;
                         font-size: 16px;
                         font-family: "TajawalRegular";
+
+                        &:hover {
+                            color: $color2;
+                        }
                     }
                 }
 
