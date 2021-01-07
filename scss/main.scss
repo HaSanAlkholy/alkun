@@ -114,7 +114,7 @@
 
         &:hover {
             color: white;
-            background-color:$color2;
+            background-color: $color2;
         }
 
         @media (max-width: 992px) {
@@ -174,7 +174,7 @@
 }
 
 .product {
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     padding-bottom: 13px;
     height: 100%;
     .product-img {
@@ -197,6 +197,7 @@
 
     .product-disc {
         text-align: center;
+        padding: 0 10px;
 
         h5 {
             font-size: 16px;
@@ -204,6 +205,7 @@
             line-height: 18px;
             max-height: 18px;
             overflow: hidden;
+            text-overflow: ellipsis;
 
             &:hover {
                 a {
@@ -261,7 +263,7 @@
                 margin-inline-end: 6px;
             }
 
-            &:hover{
+            &:hover {
                 background-color: $color2;
             }
         }
@@ -304,7 +306,7 @@
 }
 
 .product-slider {
-    padding-top: 50px;
+    padding-top: 100px;
     position: relative;
     overflow: hidden;
 }
@@ -521,11 +523,11 @@ nav {
 
         .nav-icons {
             .nav-icon {
-                margin-inline-start: 17px;
+                margin-inline-start: 24px;
 
                 .ico-btn {
                     color: $color1;
-                    font-size: 26px;
+                    font-size: 24px;
                     text-align: center;
                     cursor: pointer;
                     transition: all 0.5s;
@@ -533,6 +535,7 @@ nav {
                     justify-content: center;
                     align-items: center;
                     position: relative;
+
                     .count {
                         width: 16px;
                         height: 16px;
@@ -541,17 +544,15 @@ nav {
                         align-items: center;
                         background-color: $color2;
                         border-radius: 100%;
-                        color: black;
+                        color: white;
                         font-size: 13px;
                         line-height: 0;
                         transition: all 0.5s;
                         margin-inline-end: 5px;
                         position: absolute;
-                        top: -3px;
+                        top: -7px;
                         right: -7px;
                     }
-
-                  
 
                     &:hover {
                         color: $color2;
@@ -569,11 +570,11 @@ nav {
                 }
             }
 
-            .nav-lang{
-                .ico-btn{
-                    font-size:18px;
+            .nav-lang {
+                .ico-btn {
+                    font-size: 14px;
                 }
-                img{
+                img {
                     margin-inline-end: 5px;
                 }
 
@@ -641,14 +642,14 @@ nav {
                 font-weight: 500;
                 padding: 0;
 
-                &>li {
+                & > li {
                     margin: 0 15px;
 
-                    &>a,
-                    &>.setting-anchor {
+                    & > a,
+                    & > .setting-anchor {
                         color: $color1;
                         transition: all 0.5s;
-                        font-size: 18px;
+                        font-size: 16px;
                         text-transform: capitalize;
                         font-family: TajawalMedium;
 
@@ -660,7 +661,6 @@ nav {
                             display: none;
                         }
                     }
-
                 }
 
                 .in-menu {
@@ -792,7 +792,7 @@ nav {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-                                img{
+                                img {
                                     margin-inline-end: 5px;
                                 }
                                 .down {
@@ -862,9 +862,9 @@ nav {
 }
 
 .up {
-    height: 50px;
-    width: 50px;
-    background-color: rgba(97, 97, 97, 0.4);
+    height: 45px;
+    width: 45px;
+    background-color: rgba(0, 0, 0, 0.5);
     right: 10px;
     bottom: 30px;
     color: white;
@@ -1115,8 +1115,11 @@ header {
 
             h3 {
                 margin: 0;
-                font-size: 17px;
+                font-size: 15px;
                 font-family: TajawalMedium;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding: 0 5px;
             }
         }
 
@@ -1271,6 +1274,7 @@ footer {
             li {
                 margin-bottom: 15px;
                 transition: all 0.5s;
+                color: #8a8a8a;
                 a {
                     font-size: 16px;
                     transition: all 0.3s;
@@ -1316,6 +1320,10 @@ footer {
 
         .mail {
             max-width: 100%;
+
+            @media(max-width:576px){
+                margin-top:40px;
+            }
 
             h4 {
                 margin-bottom: 16px;
@@ -1411,12 +1419,10 @@ footer {
                     align-items: center;
                     justify-content: center;
 
-                    &:hover{
+                    &:hover {
                         background-color: $color2;
                     }
                 }
-
-              
             }
         }
     }
@@ -1573,9 +1579,9 @@ html[dir="ltr"] {
         }
     }
 
-    .up{
-        right:unset;
-        left:10px;
+    .up {
+        right: unset;
+        left: 10px;
     }
 }
 

@@ -141,7 +141,7 @@ ul {
 
 .slide .drop {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -367,7 +367,7 @@ ul {
 }
 
 .product {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   padding-bottom: 13px;
   height: 100%;
 }
@@ -392,6 +392,7 @@ ul {
 
 .product .product-disc {
   text-align: center;
+  padding: 0 10px;
 }
 
 .product .product-disc h5 {
@@ -400,6 +401,7 @@ ul {
   line-height: 18px;
   max-height: 18px;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product .product-disc h5:hover a {
@@ -490,7 +492,7 @@ ul {
 }
 
 .product-slider {
-  padding-top: 50px;
+  padding-top: 100px;
   position: relative;
   overflow: hidden;
 }
@@ -716,12 +718,12 @@ nav .nav-bottom .search .search-content .search-btn:hover {
 }
 
 nav .nav-bottom .nav-icons .nav-icon {
-  margin-inline-start: 17px;
+  margin-inline-start: 24px;
 }
 
 nav .nav-bottom .nav-icons .nav-icon .ico-btn {
   color: #111742;
-  font-size: 26px;
+  font-size: 24px;
   text-align: center;
   cursor: pointer;
   transition: all 0.5s;
@@ -739,13 +741,13 @@ nav .nav-bottom .nav-icons .nav-icon .ico-btn .count {
   align-items: center;
   background-color: #cca952;
   border-radius: 100%;
-  color: black;
+  color: white;
   font-size: 13px;
   line-height: 0;
   transition: all 0.5s;
   margin-inline-end: 5px;
   position: absolute;
-  top: -3px;
+  top: -7px;
   right: -7px;
 }
 
@@ -764,7 +766,7 @@ nav .nav-bottom .nav-icons .nav-icon:last-of-type {
 }
 
 nav .nav-bottom .nav-icons .nav-lang .ico-btn {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 nav .nav-bottom .nav-icons .nav-lang img {
@@ -849,7 +851,7 @@ nav .nava .nava-content > ul > li > a,
 nav .nava .nava-content > ul > li > .setting-anchor {
   color: #111742;
   transition: all 0.5s;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: capitalize;
   font-family: TajawalMedium;
 }
@@ -1041,9 +1043,9 @@ nav .nava-active .nava-content {
 }
 
 .up {
-  height: 50px;
-  width: 50px;
-  background-color: rgba(97, 97, 97, 0.4);
+  height: 45px;
+  width: 45px;
+  background-color: rgba(0, 0, 0, 0.5);
   right: 10px;
   bottom: 30px;
   color: white;
@@ -1307,8 +1309,11 @@ header .swiper-container .swiper-slide img {
 
 #categories .category .category-body h3 {
   margin: 0;
-  font-size: 17px;
+  font-size: 15px;
   font-family: TajawalMedium;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0 5px;
 }
 
 #categories .category:hover .category-body {
@@ -1467,6 +1472,7 @@ footer .footer-top ul {
 footer .footer-top ul li {
   margin-bottom: 15px;
   transition: all 0.5s;
+  color: #8a8a8a;
 }
 
 footer .footer-top ul li a {
@@ -1508,6 +1514,12 @@ footer .footer-top .footer-list-active .head h4 span {
 
 footer .footer-top .mail {
   max-width: 100%;
+}
+
+@media (max-width: 576px) {
+  footer .footer-top .mail {
+    margin-top: 40px;
+  }
 }
 
 footer .footer-top .mail h4 {
